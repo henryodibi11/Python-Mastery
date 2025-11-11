@@ -1,0 +1,49 @@
+# Basic YAML Example
+# Demonstrates common data types and structures
+
+project: My First YAML Project
+description: "Learning YAML syntax and conventions"
+
+# Numbers
+port: 8080
+timeout: 30.5
+max_retries: 3
+
+# Booleans
+enabled: true
+debug: false
+
+# Strings
+database_url: localhost:5432
+message: "This is a quoted string with special chars: colons!"
+
+# Lists
+environments:
+  - dev
+  - staging
+  - production
+
+# Dictionaries
+database:
+  host: localhost
+  port: 5432
+  username: admin
+  ssl_enabled: true
+
+# Nested structures
+connection:
+  primary:
+    host: db1.example.com
+    port: 5432
+  secondary:
+    host: db2.example.com
+    port: 5432
+
+# Multiline string (literal)
+sql_query: |
+  SELECT 
+    customer_id,
+    SUM(amount) as total
+  FROM sales
+  WHERE date > '2024-01-01'
+  GROUP BY customer_id

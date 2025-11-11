@@ -1,0 +1,25 @@
+# Environment Variables Example
+# Shows how to externalize configuration values
+
+project: Environment-Aware Pipeline
+
+database:
+  host: ${DB_HOST}
+  port: ${DB_PORT:-5432}  # Default to 5432 if not set
+  username: ${DB_USER}
+  database: ${DB_NAME}
+
+azure:
+  storage_account: ${AZURE_STORAGE_ACCOUNT}
+  key_vault_name: ${KEY_VAULT_NAME}
+  
+secrets:
+  # Never hardcode - use Key Vault references
+  auth_mode: key_vault
+  key_vault_name: ${KEY_VAULT_NAME}
+  secret_name: database-connection-string
+
+settings:
+  environment: ${ENVIRONMENT:-development}
+  debug: ${DEBUG:-false}
+  log_level: ${LOG_LEVEL:-INFO}

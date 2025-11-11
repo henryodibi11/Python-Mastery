@@ -1,0 +1,27 @@
+# Minimal Pipeline Configuration
+# Simplified version of Odibi config for learning
+
+project: Mini ETL Pipeline
+
+connections:
+  data:
+    type: local
+    base_path: ./data
+  
+  outputs:
+    type: local
+    base_path: ./outputs
+
+pipelines:
+  - pipeline: simple_etl
+    nodes:
+      - name: load_data
+        operation: read
+      
+      - name: transform_data
+        operation: transform
+        depends_on: [load_data]
+      
+      - name: save_data
+        operation: write
+        depends_on: [transform_data]
