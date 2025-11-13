@@ -28,10 +28,19 @@ After completing this lesson, you will:
 ## 📁 Files
 
 - **lesson.ipynb** - Complete tutorial with runnable examples
+- **[PYTEST_GUIDE.md](PYTEST_GUIDE.md)** - 📖 **START HERE if concepts are unclear!** Deep explanations of testing concepts
 - **exercises.ipynb** - Practice problems to solidify learning
 - **solutions.ipynb** - Solutions with explanations
-- **conftest_example.py** - Example shared fixtures configuration
+- **[pytest.ini](pytest.ini)** - Example pytest configuration file
+- **[conftest.py](conftest.py)** - Shared fixtures example
 - **odibi_test_analysis.md** - Deep dive into Odibi's 416 test architecture
+
+## 🎯 When to Use Each Resource
+
+- **Feeling confused about fixtures, mocking, or coverage?** → Read **[PYTEST_GUIDE.md](PYTEST_GUIDE.md)** first!
+- **Want hands-on practice?** → Work through **lesson.ipynb**
+- **Need quick reference?** → Check **PYTEST_GUIDE.md** Quick Reference section
+- **Setting up a new project?** → Copy **pytest.ini** and **conftest.py** patterns
 
 ## 🚀 Quick Start
 
